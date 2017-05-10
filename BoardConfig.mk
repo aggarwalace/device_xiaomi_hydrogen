@@ -16,13 +16,11 @@
 # inherit from common msm8956-common
 -include device/xiaomi/msm8956-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/hydrogen
-
 # Assert
 TARGET_OTA_ASSERT_DEVICE := hydrogen
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/hydrogen/bluetooth
 
 # Filesystem
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
@@ -32,10 +30,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 26705099776 # 26705116160 - 16384
 TARGET_KERNEL_CONFIG := darkness_hydrogen_defconfig
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP += device/xiaomi/hydrogen/system.prop
 
 # Sepolicy
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += device/xiaomi/hydrogen/sepolicy
 
 # Tap-to-Wake
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
